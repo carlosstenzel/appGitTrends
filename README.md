@@ -15,7 +15,7 @@ Neste projeto utilizei React Native, para gerar um app de Trends de repositorios
 
 ### Feito Com
 
-Abaixo segue o que foi utilizado na criação deste template:
+Abaixo segue o que foi utilizado na criação deste projeto:
 
 - React Native
 - React Navigation
