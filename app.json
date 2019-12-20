@@ -1,0 +1,10 @@
+{
+  "name": "appGitTrend",
+  "displayName": "appGitTrend",
+  "expo": {
+    "name": "My app",
+    "slug": "my-app",
+    "sdkVersion": "35.0.0",
+    "privacy": "public"
+  }
+}
