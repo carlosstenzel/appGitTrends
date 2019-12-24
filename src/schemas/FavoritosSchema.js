@@ -1,16 +1,15 @@
 export default class FavoritosSchema {
   static schema = {
-    name: 'Favorito',
+    name: 'Favorit',
     properties: {
-      idc: 'string',
+      id: 'string',
       name: 'string',
-      fullName: 'string',
+      owner: 'string',
       description: 'string',
       stars: 'int',
       forks: 'int',
       languageName: 'string',
       languageColor: 'string',
-      url: 'string',
     },
   };
 }

@@ -1,17 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {
-  Text,
-  Picker,
-  ActivityIndicator,
-  View,
-  StyleSheet,
-  Modal,
-} from 'react-native';
+import {Text, Picker, StyleSheet} from 'react-native';
 
 import Repository from '~/components/Repository';
+import Loading from '~/components/Loading';
 import languages from '~/components/Parts/languages.json';
 import 'cross-fetch/polyfill';
 import {gql} from 'apollo-boost';
+// Importando acesso ao servidor
 import api from '~/services/api';
 
 import {Container, Title, SmallTitle, Form, FormDiv, List} from './styles';
@@ -24,6 +19,7 @@ export default function Main({navigation}) {
   const [pickerlanguage, setPickerlanguage] = useState('javascript');
 
   async function loadRepositories(language) {
+    // Formatando data
     const datape = new Date();
     const mes = Number(datape.getMonth());
     const ano = Number(datape.getFullYear());
@@ -40,13 +36,15 @@ export default function Main({navigation}) {
               name
               forkCount
               description
-              url
               nameWithOwner
+              owner {
+                login
+              }
               primaryLanguage {
                 color
                 name
               }
-              stargazers {
+              stargazers(orderBy: {field: STARRED_AT, direction: DESC}) {
                 totalCount
               }
             }
@@ -59,23 +57,21 @@ export default function Main({navigation}) {
     setLoading(false);
   }
 
+  // function para alterar a linguagem
   function AlteraLanguage(e) {
     setLoading(true);
     setPickerlanguage(e);
     loadRepositories(e);
   }
 
+  //carrega dados novamente quando mudar linguagem
   useEffect(() => {
     loadRepositories(pickerlanguage);
   }, [pickerlanguage]);
 
   return (
     <Container>
-      <Modal visible={loading}>
-        <View style={[loaders.container, loaders.horizontal]}>
-          <ActivityIndicator size="large" color="#8e44ad" />
-        </View>
-      </Modal>
+      <Loading loading={loading} />
       <Title>Trending</Title>
       <SmallTitle>
         See what the GitHub community is most excited about today.
@@ -109,16 +105,6 @@ export default function Main({navigation}) {
 }
 
 const loaders = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#eee',
-  },
-  horizontal: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    padding: 10,
-  },
   tamanhoinput: {
     width: 150,
   },

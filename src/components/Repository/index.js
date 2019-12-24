@@ -11,13 +11,7 @@ export default function Repository({navigation, data}) {
         navigation.navigate('Detalhes', {
           id: data.id,
           name: data.name,
-          fullName: data.nameWithOwner,
-          stars: data.stargazers.totalCount,
-          forks: data.forkCount,
-          url: data.url,
-          description: data.description,
-          Languagename: data.primaryLanguage.name,
-          Languagecolor: data.primaryLanguage.color,
+          owner: data.owner.login,
         })
       }>
       <Container>

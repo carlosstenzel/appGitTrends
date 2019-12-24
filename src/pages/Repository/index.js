@@ -8,7 +8,7 @@ export default function Repository({navigation}) {
 
   async function loadRepo() {
     const realm = await getRealm();
-    const data = realm.objects('Favorito').sorted('stars', true);
+    const data = realm.objects('Favorit').sorted('stars', true);
     setRepositories(data);
   }
 

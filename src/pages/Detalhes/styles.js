@@ -23,19 +23,22 @@ export const Box = styled.View`
   padding: 20px;
   border-radius: 4px;
   background: #fff;
-  margin: 20px 10px;
+  margin: 20px;
 `;
 
 export const Description = styled.Text`
   color: #666;
   margin-top: 5px;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.4;
   line-height: 20px;
+  text-align: justify;
 `;
 
 export const Stats = styled.View`
   flex-direction: row;
-  margin-top: 15px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 `;
 
 export const Stat = styled.View`
@@ -45,12 +48,26 @@ export const Stat = styled.View`
 
 export const StatCount = styled.Text`
   margin-left: 6px;
+  font-size: 15px;
 `;
 
 export const ShowURl = styled.Text`
   flex-direction: row;
   margin-top: 10px;
   color: #666;
+  background: #eee;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+`;
+export const ShowIssue = styled.Text`
+  flex-direction: row;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 15px;
+  background: #333;
+  padding: 20px;
+  border-radius: 5px;
 `;
 
 export const Favoritos = styled.TouchableOpacity`
@@ -65,4 +82,22 @@ export const Favoritos = styled.TouchableOpacity`
 export const Texto = styled.Text`
   color: #fff;
   font-size: 19px;
+`;
+
+export const ListCola = styled.FlatList.attrs({
+  contentContainerStyle: {paddingHorizontal: 20},
+})`
+  margin-top: 20px;
+`;
+
+export const BoxLogo = styled.View`
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Logo = styled.Image`
+  background: #fff;
+  width: 110;
+  border-radius: 55;
+  height: 110;
 `;

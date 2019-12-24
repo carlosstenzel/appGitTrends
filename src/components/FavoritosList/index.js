@@ -9,19 +9,15 @@ export default function Repository({navigation, data}) {
     <TouchableOpacity
       onPress={() =>
         navigation.navigate('Detalhes', {
-          id: data.idc,
+          id: data.id,
           name: data.name,
-          fullName: data.fullName,
-          stars: data.stars,
-          forks: data.forks,
-          url: data.url,
-          description: data.description,
-          Languagename: data.languageName,
-          Languagecolor: data.languageColor,
+          owner: data.owner,
         })
       }>
       <Container>
-        <Name>{data.fullName}</Name>
+        <Name>
+          {data.owner}/{data.name}
+        </Name>
         <Description>{data.description}</Description>
 
         <Stats>
