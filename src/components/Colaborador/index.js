@@ -17,7 +17,7 @@ export default function Colaborador({data}) {
         <Name>{data.login}</Name>
       </BoxUser>
       <BoxContri>
-        <Contributions>{data.contributions} Contributions </Contributions>
+        <Contributions>{data.contributions}</Contributions>
       </BoxContri>
     </Container>
   );

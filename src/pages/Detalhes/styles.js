@@ -19,6 +19,14 @@ export const Title = styled.Text`
   padding: 0 20px;
 `;
 
+export const TitleMenor = styled.Text`
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 0 20px;
+`;
+
 export const Box = styled.View`
   padding: 20px;
   border-radius: 4px;
@@ -29,7 +37,7 @@ export const Box = styled.View`
 export const Description = styled.Text`
   color: #666;
   margin-top: 5px;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.4;
   line-height: 20px;
   text-align: justify;

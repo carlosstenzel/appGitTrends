@@ -23,6 +23,7 @@ import {
   ListCola,
   Favoritos,
   Texto,
+  TitleMenor,
   ShowIssue,
 } from './styles';
 
@@ -211,6 +212,7 @@ export default function Detalhes({navigation}) {
               remover={() => removeFavoritos()}
             />
           </Box>
+          <TitleMenor>Colaboradores</TitleMenor>
           {colaborador.map(item => (
             <Colaborador key={item.id} data={item} />
           ))}
