@@ -1,3 +1,4 @@
+import {KEY_API_GITHUB} from 'react-native-dotenv';
 import ApolloClient from 'apollo-boost';
 
 const api = new ApolloClient({
@@ -5,7 +6,7 @@ const api = new ApolloClient({
   request: operation => {
     operation.setContext({
       headers: {
-        authorization: `Bearer d0d16b0d8e6477f96b611e9322c20410ebb498a7`,
+        authorization: `Bearer ${KEY_API_GITHUB}`,
       },
     });
   },

@@ -48,7 +48,13 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 yarn install
 ```
 
-2.  Executar os comandos separados
+2.  Configurar Key do GitHub
+  - Acessar arquivo .env e alterar valor para o da key
+  * 1 - https://github.com/settings/tokens
+  * 2 - Personal access tokens
+  * 3 - Generate a personal access token
+
+3.  Executar os comandos separados
 ```sh
 yarn start
 react-native run-android
