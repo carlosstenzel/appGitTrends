@@ -49,7 +49,7 @@ yarn install
 ```
 
 2.  Configurar Key do GitHub
-  - Acessar arquivo .env e alterar valor para o da key
+  - Acessar arquivo .env e alterar valor para o da key ou acessar /src/services/api.js
   * 1 - https://github.com/settings/tokens
   * 2 - Personal access tokens
   * 3 - Generate a personal access token
