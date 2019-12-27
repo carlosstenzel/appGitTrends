@@ -3,9 +3,8 @@
 </p>
 <br />
 <p>
-  <img width="180" src=".assets-git/GitTrend-01.jpg">
-  <img width="180" src=".assets-git/appGitTrend-02.jpg">
-  <img width="180" src=".assets-git/appGitTrend-03.jpg">
+  <img width="180" src=".assets-git/app.gif">
+
 </p>
 
 
