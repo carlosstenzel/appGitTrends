@@ -5,7 +5,7 @@
 <p>
   <img width="180" src=".assets-git/GitTrend-01.jpg">
   <img width="180" src=".assets-git/appGitTrend-02.jpg">
-  <img width="180" src="assets-git/appGitTrend-03.jpg">
+  <img width="180" src=".assets-git/appGitTrend-03.jpg">
 </p>
 
 
@@ -35,26 +35,30 @@ List of libraries used in project development:
 
 ### Install
 
-1. Para instalar e utilizar o processo é bem simples, basta digitar o comando:
+1. Enter command to install dependencies:
 
 ```sh
 yarn install
 ```
 
-2.  Configurar Key do GitHub
-  - Acessar arquivo .env e alterar valor para o da key ou acessar /src/services/api.js
+2.  Configure Key of GitHub
+  -  Access file .env and change key value
   * 1 - https://github.com/settings/tokens
   * 2 - Personal access tokens
   * 3 - Generate a personal access token
 
   HELP: https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
 
-3.  Executar os comandos separados
+3.  Enter command
 ```sh
 yarn start
+```
 
+And
+
+```sh
 // For Android
 react-native run-android
 // FOr IOS
 react-native run-ios
----
+```
