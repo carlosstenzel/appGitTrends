@@ -10,7 +10,7 @@
 
 ## About in project
 
-Application developed with React Native, Graphql, Apolo, Axios.
+Application developed with React Native, Graphql, Apolo, Axios, Realm.
 
 ### Libraries used
 
