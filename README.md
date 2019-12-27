@@ -53,6 +53,8 @@ yarn install
   * 1 - https://github.com/settings/tokens
   * 2 - Personal access tokens
   * 3 - Generate a personal access token
+  
+  _ https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
 
 3.  Executar os comandos separados
 ```sh
