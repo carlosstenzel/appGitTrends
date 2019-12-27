@@ -42,7 +42,7 @@ yarn install
 ```
 
 2.  Configure Key of GitHub
-  -  Access file .env and change key value
+  -  Create file .env and change key value, following the example of file .env-example
   * 1 - https://github.com/settings/tokens
   * 2 - Personal access tokens
   * 3 - Generate a personal access token
