@@ -3,19 +3,19 @@
 </p>
 <br />
 <p>
-  <img width="180" src="./GitTrend-01.jpg">
-  <img width="180" src="./appGitTrend-02.jpg">
-  <img width="180" src="./appGitTrend-03.jpg">
+  <img width="180" src=".assets-git/GitTrend-01.jpg">
+  <img width="180" src=".assets-git/appGitTrend-02.jpg">
+  <img width="180" src="assets-git/appGitTrend-03.jpg">
 </p>
 
 
-## Sobre o Projeto
+## About in project
 
-Neste projeto utilizei React Native, para gerar um app de Trends de repositorios do GitHub.
+Application developed with React Native, Graphql, Apolo, Axios.
 
-### Feito Com
+### Libraries used
 
-Abaixo segue o que foi utilizado na criação deste projeto:
+List of libraries used in project development:
 
 - React Native
 - React Navigation
@@ -24,23 +24,16 @@ Abaixo segue o que foi utilizado na criação deste projeto:
 - Reactotron
   - reactotron-react-native
 - Babel
-  - babel-eslint
-  - babel-plugin-root-import
 - Eslint
-  - eslint-config-airbnb
-  - eslint-plugin-import
-  - eslint-plugin-jsx-a11y
-  - eslint-plugin-react
-  - eslint-plugin-react-native
-  - eslint-import-resolver-babel-plugin-root-import
 - EditorConfig
 - Apollo
 - GraphQL
 - Realm
 - Styled-components
+- React Native dotenv
 
 
-### Instalação
+### Install
 
 1. Para instalar e utilizar o processo é bem simples, basta digitar o comando:
 
@@ -53,12 +46,15 @@ yarn install
   * 1 - https://github.com/settings/tokens
   * 2 - Personal access tokens
   * 3 - Generate a personal access token
-  
-  _ https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
+
+  HELP: https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
 
 3.  Executar os comandos separados
 ```sh
 yarn start
-react-native run-android
----
 
+// For Android
+react-native run-android
+// FOr IOS
+react-native run-ios
+---
