@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Text, Picker, StyleSheet} from 'react-native';
+import {Text, Picker, StyleSheet, SafeAreaView} from 'react-native';
 
 import Repository from '~/components/Repository';
 import Loading from '~/components/Loading';
@@ -71,35 +71,43 @@ export default function Main({navigation}) {
 
   return (
     <Container>
-      <Loading loading={loading} />
-      <Title>Trending</Title>
-      <SmallTitle>
-        See what the GitHub community is most excited about today.
-      </SmallTitle>
+      <SafeAreaView>
+        <Loading loading={loading} />
+        <Title>Trending</Title>
+        <SmallTitle>
+          See what the GitHub community is most excited about today.
+        </SmallTitle>
 
-      <Form>
-        <FormDiv>
-          <Text style={loaders.styletexto}>Select Language: </Text>
-          <Picker
-            style={loaders.tamanhoinput}
-            selectedValue={pickerlanguage}
-            placeholder="Select language"
-            mode="dropdown"
-            onValueChange={(itemValue, itemIndex) => AlteraLanguage(itemValue)}>
-            {languages.map((item, key) => (
-              <Picker.Item label={item.name} value={item.urlParam} key={key} />
-            ))}
-          </Picker>
-        </FormDiv>
-      </Form>
-      <List
-        keyboardShouldPersistTaps="handled"
-        data={repositories}
-        keyExtractor={item => item.id}
-        renderItem={({item}) => (
-          <Repository navigation={navigation} data={item} />
-        )}
-      />
+        <Form>
+          <FormDiv>
+            <Text style={loaders.styletexto}>Select Language: </Text>
+            <Picker
+              style={loaders.tamanhoinput}
+              selectedValue={pickerlanguage}
+              placeholder="Select language"
+              mode="dropdown"
+              onValueChange={(itemValue, itemIndex) =>
+                AlteraLanguage(itemValue)
+              }>
+              {languages.map((item, key) => (
+                <Picker.Item
+                  label={item.name}
+                  value={item.urlParam}
+                  key={key}
+                />
+              ))}
+            </Picker>
+          </FormDiv>
+        </Form>
+        <List
+          keyboardShouldPersistTaps="handled"
+          data={repositories}
+          keyExtractor={item => item.id}
+          renderItem={({item}) => (
+            <Repository navigation={navigation} data={item} />
+          )}
+        />
+      </SafeAreaView>
     </Container>
   );
 }
